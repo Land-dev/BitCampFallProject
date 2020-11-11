@@ -858,6 +858,12 @@
 	top: 1500px;
   }
 
+  .amazonResultsOutput:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
   .showImage {
 	position: absolute;
 	overflow: visible;
@@ -866,3 +872,37 @@
 	left: 400px;
 	top: 1100px;
   }
+
+  @font-face
+{
+font-family: Bebas Neue;
+src: url('Bebas_Neue/BebasNeue-Regular.ttf')
+}
+
+.objectsBrandsFont {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 40px;
+	color: rgba(221,96,49,1);
+}
+
+.amazonResultsFont {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 30px;
+}
+
+.amazonResultsHeaderFont {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 40px;
+	color: rgba(221,96,49,1);
+}
+
+.listItem {
+	float: left;
+    width: 680px;
+	padding: 10px;
+}
+
+.listImage {
+	width: fit-content;
+	height: fit-content;
+}
