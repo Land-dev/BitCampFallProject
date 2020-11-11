@@ -62,8 +62,8 @@ async function handle(event) {
     var brand = data.result.brands[0];
 
     var resultString = `
-    <p> Objects: ${object.object}</p>
-    <p> Brands: ${brand.name}</p>
+    <p class="objectsBrandsFont"> Objects: ${object.object}</p>
+    <p class="objectsBrandsFont"> Brands: ${brand.name}</p>
     `
     $("#objects-brands").html(resultString);
 
@@ -71,10 +71,12 @@ async function handle(event) {
 
     var productDescriptionArray = productDescription.map(x => {
         var returnString = `
-            <h4>${x.productDescription}<h4>
-            <p><img src="${x.imgUrl}"></p>
-            <p>Price : $${x.price}<p>
-            <p> Product Rating: ${x.productRating} </p>
+            <div class ="listItem">
+            <h4 class = "amazonResultsHeaderFont">${x.productDescription}<h4>
+            <p class ="amazonResultsFont"><img src="${x.imgUrl}" class = "listImage"></p>
+            <p class ="amazonResultsFont">Price : $${x.price}<p>
+            <p class ="amazonResultsFont"> Product Rating: ${x.productRating} </p>
+            </div>
         `;
     
         return returnString;
@@ -84,14 +86,4 @@ async function handle(event) {
 
     $("#amazon-results").html(productDescriptionString);
     
-    
-    var amazonResultString = `
-    
-    <h3>Products On Amazon</h3>
-    <p> Product Description: </p>
-    <p> Image: </p>
-    <p> Price: </p>
-    <p> Product Rating: </p>
-
-    `
 }
