@@ -50,7 +50,7 @@ async function handle(event) {
     var payload = new FormData(imageForm);
     console.log(payload);
 
-    const resp = await fetch("https://azurevision.azurewebsites.net/api/azureVision?code=yVKzB4jA3hXM4Rm6LRsZFjL4q0YzwOE6tSHm1RVxq8NPl0Xb8hdx2A==", {
+    const resp = await fetch("https://azurevision.azurewebsites.net/api/azureVision?code=YOUR_CODE_HERE", {
         method: "POST",
         body: payload,
     });
